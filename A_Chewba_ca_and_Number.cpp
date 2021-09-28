@@ -3,19 +3,17 @@ using namespace std;
 
 int main()
 {
-    vector<long long> numReverse;
-    long long x;
-    cin>>x;
-    while(x%10>0) {
-        int lastD = x%10;
-        if((9-lastD)<lastD) {
-            int newD = 9-lastD;
-            numReverse.push_back(newD);
-        } else {
-            numReverse.push_back(lastD);
+    string s;
+    cin>>s;
+    for(int i=0; i<s.size(); i++) {
+        if(s[i]>='5') {
+            s[i] = '9'-s[i] + '0';
         }
-        x = x/10;
+        if(s[0]=='0') {
+            s[0] = '9';
+        }
     }
+    cout<<s<<endl;
     
     return 0;
 }
