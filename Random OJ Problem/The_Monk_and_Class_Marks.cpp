@@ -12,7 +12,7 @@ int main()
 {
     int n;
     cin>>n;
-    map<int, set<string>> marksStudents;
+    map<int, multiset <string>> marksStudents;
     for(int i=0 ; i<n; i++) {
         int num;
         string name;
